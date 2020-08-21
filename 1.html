@@ -3,19 +3,35 @@
     <title></title>
     <meta name="viewport" content="width=device-width,user-scalable=no">
     <style>
-        body{
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        #container{
+            background-color: aquamarine;
+            height: 200px;
+
+            overflow: hidden;
+        }
+        .middle{
+            margin: 0 400px 0 400px;
+        }
+        .left{
+            float: left;
+            width: 400px;
+            height: 200px;
+            background-color: red;
+        }
+        .right{
+            float: right;
+            width: 400px;
+            height: 200px;
+            background-color: blue;
         }
     </style>
 </head>
 <body class="body" id="body">
-    <div>111</div>
-    <form>
-        <select name='select1'>
-            <option value="1">1</option>
-            <option value='2'>1</option>
-        </select>
-    </form>
+    <div id='container'>
+        <div class='left'></div>
+        <div class='right'></div>
+        <div class='middle'>文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</div>
+    </div>
     
 </body>
 </html>
