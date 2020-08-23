@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>aaa</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            /* 按钮 */
+            .dropdown__toggle{
+                display: block;
+                padding: .5em 1em;
+                border: 1px solid hsl(280, 10%, 80%);
+                color: hsl(280, 30%, 60%);
+                background-color: white;
+                font: inherit;
+                text-decoration: none;
+                transition: background-color .2s linear;
+            }
+
+            .dropdown__toggle:hover{
+                background-color: hsl(280, 15%, 95%);
+            }
+            
+            .dropdown__drawer{
+                position: absolute;
+                background-color: white;
+                width: 10em;
+                height: 0;
+                overflow: hidden;
+                transition: height .3s ease-out;
+            }
+
+            .dropdown.isopen .dropdown__drawer{
+                height: auto;
+            }
+
+            .menu{
+                padding-left: 0;
+                margin: 0;
+                list-style-type: none;
+            }
+
+            .menu > li + li > a{
+                border-top: 0;
+            }
+
+            .menu > li > a{
+                display: block;
+                padding: .5em 1em;
+                color: hsl(280, 40%, 60%);
+                background-color: white;
+                text-decoration: none;
+                transition: all .2s linear;
+                border: 1px solid hsl(280, 10%, 80%);
+            }
+
+            .menu > li > a:hover{
+                color: hsl(280, 15%, 95%);
+                background-color: hsl(280, 25%, 10%);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="dropdown" aria-haspopup="true">
+            <button class="dropdown__toggle">Menu</button>
+            <div class="dropdown__drawer">
+                <ul class="menu" role="menu">
+                    <li role="menuitem">
+                        <a>Home</a>
+                    </li>
+                    <li role="menuitem">
+                        <a>Features</a>
+                    </li>
+                    <li role="menuitem">
+                        <a>Practices</a>
+                    </li>
+                    <li role="menuitem">
+                        <a>About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p><a href="">Read more</a></p>
+        <script>
+            void function(){
+                var toggle = document.getElementsByClassName('dropdown__toggle')[0]
+                var dropdown = toggle.parentElement;
+                var drawer = document.getElementsByClassName('dropdown__drawer')[0];
+                var height = drawer.scrollHeight;
+                toggle.addEventListener('click',(e)=>{
+                    e.preventDefault();
+                    dropdown.classList.toggle('isopen');
+                    if(dropdown.classList.contains('isopen')){
+                        drawer.style.setProperty('height',height + 'px');
+                    }else{
+                        drawer.style.setProperty('height','0');
+                    }
+                })
+            }();
+        </script>
+    </body>
+</html>
