@@ -19,7 +19,7 @@
         }
 
         .container{
-            width: 80%;
+            max-width: 1080px;
             margin: 0 auto;
         }
 
@@ -32,18 +32,26 @@
         main{
             padding: 0 1.5em;
             background-color: #ffffff;
+            margin: 1em 0em ;
+        }
+
+        .clearfix::after,
+        .clearfix::before{
+            display: table;
+            content: ' ';
+            margin: 1em 0;
         }
 
         .clearfix::after{
             clear: both;
-            display: block;
-            content: ' ';
         }
 
         .media{
-            width: 40%;
+            width: calc(50% - 3em);
             float: left;
+            margin: 1.5em;
             background-color: #0072b0;
+            padding: 1em;
         }
 
         .media:nth-child(odd){
@@ -52,6 +60,9 @@
 
         .media-image{
             float: left;
+        }        
+        .media-body{
+            overflow: auto;
         }
 
     </style>
