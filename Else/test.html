@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <style>
+        :root{
+            --a:#ff0000;
+        }
+        [id = 'container']{
+            background-color: var(--a);
+            height: 100px;
+            width: 50%;
+            margin: 0 auto;
+        }
+p{
+    background-color: yellow;
+    line-height: 30px;
+}
+p span{
+    line-height: 1;
+}
+#vfather{
+    height: 100px;
+    line-height: 50px;
+}
+#vson{
+    display: inline-block;
+    background-color: #ff0000;
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+}
+
+    </style>
+</head>
+<body class="body" id="body">
+    <div id='container'></div>
+
+<p><span>is a somewhat long HTML
+    paragraph that will be broken into several
+    lines. The first line will be identified
+    by a fictional tag sequence. The other lines
+    will be treated as ordinary lines in the
+    paragraph.</span></p>
+
+    <div id = 'vfather'>
+        <div id = 'vson'></div>
+    </div>
+</body>
+</html>
