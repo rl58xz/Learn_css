@@ -1,0 +1,42 @@
+<style>
+    .container1{
+        height: 600px;
+        background-color: red;
+    }
+
+    .container2{
+        height: 600px;
+        background-color: black;
+    }
+    
+    .borderst{
+        position: absolute;
+        border-width: 10px;
+        border-style: solid;
+        border-color: green transparent transparent;
+        width: 0;
+    }
+</style>
+
+<div class="container1">
+    <div class="borderst"></div>
+    <a href="#1">tiaodao</a>
+</div>
+
+<div class="container2">
+    <h2 id="1">current</h2>
+</div>
+
+<button onclick="scoll()">ssss</button>
+
+<script>
+    window.addEventListener('hashchange',(e) => {
+        console.log(location);
+    })
+
+    function scoll(){
+        let container1 = document.getElementsByClassName('container1')[0];
+        container1.scrollIntoView({behavior:'smooth'});
+        // window.scrollTo({top:0,left:0,behavior:'smooth'});
+    }
+</script>
