@@ -1,0 +1,89 @@
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+header,main,footer{
+    margin: 0;
+}
+
+header{
+    background-color: #20c997;
+}
+
+/*头部布局*/
+.header>h1{
+    float: left;
+}
+
+.header>ul{
+    float: right;
+    list-style: none;
+}
+
+.header>ul>li{
+    list-style: none;
+    display: inline-block;
+}
+
+.header::after{
+    content: ' ';
+    display: table;
+    clear: both;
+    overflow: hidden;
+}
+
+/*按钮*/
+.button{
+    padding: 0.5em 0.8em;
+    border: 1px solid #333333;
+    border-radius: 0.2em;
+    background-color: transparent;
+    font-size: 1rem;
+}
+
+.button--normal{
+    border-color: #cfe8c9;
+    color: #fff;
+    background-color: #2f5926;
+}
+
+.button--white{
+    border-color: #fff;
+    background-color: #fff;
+    color: #000;
+}
+
+.banner{
+    background-image: url(./collaboration.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.bannercontent{
+    max-width: 900px;
+    margin: 95px auto;
+}
+
+.bannercontent>h1{
+    text-align: right;
+}
+
+.bannercontent>h1,a{
+    float: right;
+    clear: both;
+}
+
+.flexbox{
+    display: flex;
+    flex-direction: row;
+}
+
+.content{
+    padding: 30px;
+    margin: 20px;
+    letter-spacing: 0.1em;
+}
