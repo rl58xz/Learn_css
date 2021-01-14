@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <title>布局类</title>
+    <style>
+        .fullscreen-layout {
+            height: 400px;
+            position: relative;
+        }
+
+        .fullscreen-layout>header {
+            position: absolute;
+            top: 0;
+            height: 50px;
+            left: 0;
+            right: 0;
+            background-color: saddlebrown;
+        }
+
+        .fullscreen-layout>footer {
+            position: absolute;
+            bottom: 0;
+            height: 50px;
+            left: 0;
+            right: 0;
+            background-color: sandybrown;
+        }
+
+        .fullscreen-layout>main {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50px;
+            bottom: 50px;
+            background-color: aquamarine;
+        }
+
+        .twocolumn {
+            height: 100px;
+        }
+
+        .twocolumn>.left {
+            float: left;
+            width: 100px;
+            background-color: cadetblue;
+        }
+
+        .twocolumn>.right {
+            background-color: blueviolet;
+            margin-left: 100px;
+        }
+
+        .bubble-box {
+            position: relative;
+            border-radius: 5px;
+            width: 200px;
+            height: 50px;
+            background-color: #f90;
+            line-height: 50px;
+            text-align: center;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .bubble-box::after {
+            position: absolute;
+            left: 100%;
+            top: 50%;
+            margin-top: -5px;
+            border: 5px solid transparent;
+            border-left-color: #f90;
+            content: "";
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fullscreen-layout">
+        <header></header>
+        <main></main>
+        <footer></footer>
+    </div>
+
+    <div class="twocolumn">
+        <div class="left">sss</div>
+        <div class="right">ttt</div>
+    </div>
+
+    <div class="bubble-box">icss</div>
+
+</body>
+
+</html>
